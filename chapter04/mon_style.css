@@ -1,0 +1,34 @@
+BODY	{
+		font-family: arial, verdana, helvetica, sans-serif; 
+		background-color: #999999; 
+		}
+A:link {	
+		font-size: 10px; font-weight: bold; 
+		text-decoration: none; color: #CCCCCC;
+		}
+A:visited {	
+		font-size: 10px; font-weight: bold; 
+		text-decoration: none; color: #CCCCCC;
+		}
+A:active {	
+		font-size: 10px; font-weight: bold; 
+		text-decoration: none; color: #CCCCCC;
+		}
+A:hover {	
+		font-size: 10px; font-weight: bold; 
+		text-decoration: none; color: #FFFFFF;
+		}
+.title {	
+		font-size: 12px; font-weight: bold; 
+		text-decoration: none; color: #333333;
+		}
+.text {	
+		font-size: 10px; font-weight: bold; 
+		text-decoration: none; color: #333333;
+		}
+.footer {	
+		font-size: 9px; font-weight: bold; 
+		text-decoration: none; color: #666666;
+		}
+
+

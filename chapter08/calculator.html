@@ -1,0 +1,88 @@
+<html>
+
+<head>
+
+<script language = "JavaScript">
+
+function numeral(buttonValue){
+	if (startNumber){
+		document.calculator.lcd.value = buttonValue;
+		startNumber = false;
+	}else{
+		document.calculator.lcd.value = document.calculator.lcd.value+buttonValue;
+	}
+}
+
+function operand(operator){
+	firstNumber = document.calculator.lcd.value;
+	sumType = operator;
+	startNumber = true;
+}
+
+function doCalc(){
+	firstNumber = Number(firstNumber);
+	secondNumber = Number(document.calculator.lcd.value);
+	if (sumType == '*'){
+		result = firstNumber*secondNumber;
+	}
+	if (sumType =='/'){
+		result = firstNumber/secondNumber;
+	}
+	if (sumType =='+'){
+		result = firstNumber+secondNumber;
+	}
+	if (sumType =='-'){
+		result = firstNumber-secondNumber;
+	}
+	if (Number(result) != result){
+		result = 'Error'
+	}
+	document.calculator.lcd.value = result;
+	startNumber = true;
+}
+
+// Initialize...
+startNumber = true;
+firstNumber = 0;
+secondNumber = 0;
+result = 0;
+sumType = ''
+
+ 
+</script>
+			
+</head>
+
+<body>
+
+<br><br>
+
+	<form NAME="calculator">
+		<input type="text" name = "lcd" value= "0" size = "16">
+		<br>
+		<input type="button" value = "  7  " onClick ="numeral(7);">
+		<input type="button" value = "  8  " onClick ="numeral(8);">
+		<input type="button" value = "  9  " onClick ="numeral(9);">
+		<input type="button" value = "  x  " onClick ="operand('*');">
+		<br>
+		<input type="button" value = "  4  " onClick ="numeral(4);">
+		<input type="button" value = "  5  " onClick ="numeral(5);">
+		<input type="button" value = "  6  " onClick ="numeral(6);">
+		<input type="button" value = "   /  " onClick ="operand('/');">
+		<br>
+		<input type="button" value = "  1  " onClick ="numeral(1);">
+		<input type="button" value = "  2  " onClick ="numeral(2);">
+		<input type="button" value = "  3  " onClick ="numeral(3);">
+		<input type="button" value = "  +  " onClick ="operand('+');">
+		<br>
+		<input type="button" value = "  0  " onClick ="numeral(0);">
+		<input type="button" value = "   .  " onClick ="numeral('.');">
+		<input type="button" value = "  =  " onClick ="doCalc();">
+		<input type="button" value = "   -  " onClick ="operand('-');">
+		<br>
+	
+	</form>
+
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+<html>
+
+<head>
+	<script language = "JavaScript">
+		
+		// Functions
+		
+		function promptUser(){
+			userInput = prompt('enter a number greater than zero', '1');
+			userInput = Number(userInput);
+		}
+
+		function showTable(){
+			while (timesTable<=1000){
+				timesTable = userInput*count;
+				document.write(count,' x ', userInput, ' = ', timesTable, '<br>');
+				count = count+1;
+			} 
+		}
+
+		// Main code
+		
+		promptUser();
+		timesTable = 0;
+		count = 1;
+
+		// Write times table until it is over 1000
+		// but only if userInput is 1 or greater...
+		if (userInput>=1){
+			showTable();
+		}else{
+			document.write('<br><br>Please hit REFRESH and enter 1 or greater at the prompt.<br>Thanks!');
+		}
+		
+	</script>
+</head>
+
+
+<body>
+</body>
+
+</html>

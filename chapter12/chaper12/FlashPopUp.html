@@ -1,0 +1,19 @@
+
+<html>
+<head>
+<title>pop-up launcher</title>
+<script language="JavaScript">
+function openPop(src, name, scrollbar, w, h ){
+	features='menubar=no,resizable=no, scrollbars=' + scrollbar + ',width=' + w + ',height=' + h;
+	name=window.open(src, name, features);
+	name.focus();
+	void 0;
+}
+</script>
+</head>
+
+<body>
+<br><br>
+click for <a href="javascript:openPop('popup.html', 'flashPopup', 'no', 310, 270);"> pop-up</a>
+</body>
+</html>
